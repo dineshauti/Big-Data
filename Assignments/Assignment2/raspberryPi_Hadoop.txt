@@ -1,0 +1,11 @@
+ssh-keygen -t rsa -b 4096 -C dauti@uncc.edu
+
+
+ssh-copy-id pi@nameNode
+ssh-copy-id pi@dataNode1
+ssh-copy-id pi@dataNode2
+
+
+
+sudo scp -r /opt/hadoop/ pi@dataNode1:/opt/hadoop/
+sudo scp -r /opt/hadoop/ pi@dataNode2:/opt/hadoop/
